@@ -111,6 +111,88 @@ gh auth login
 
 Suivez les instructions à l'écran pour authentifier.
 
+# Astuces pour GitHub CLI
+
+Utiliser GitHub CLI (`gh`) peut rendre votre flux de travail plus rapide et plus direct. Voici quelques astuces pour les développeurs qui débutent avec `gh`.
+
+## Authentification simplifiée
+
+Utilisez SSH pour l'authentification pour éviter de saisir vos identifiants à chaque fois :
+
+```bash
+gh auth login -h github.com -p ssh
+```
+
+## Navigation rapide
+
+Ouvrez le dépôt actuel dans votre navigateur avec :
+
+```bash
+gh repo view --web
+```
+
+## Travail avec les issues
+
+Listez les issues assignées à vous dans le dépôt actuel :
+
+```bash
+gh issue list --assignee @me
+```
+
+Créez une issue en spécifiant un titre et le corps directement :
+
+```bash
+gh issue create --title "Titre de l'issue" --body "Description de l'issue"
+```
+
+## Gestion des Pull Requests (PR)
+
+Créez une pull request et remplissez automatiquement le titre et le corps avec les informations du commit :
+
+```bash
+gh pr create --fill
+```
+
+Listez les PRs qui demandent votre avis (en tant que reviewer) :
+
+```bash
+gh pr list --reviewer @me
+```
+
+## Alias pour les commandes longues
+
+Créez des alias pour simplifier les commandes longues ou fréquentes. Par exemple, définissez un alias pour lister les PRs :
+
+```bash
+gh alias set prl 'pr list --limit 10'
+gh prl
+```
+
+## Scripts et automatisation
+
+Intégrez `gh` dans vos scripts pour automatiser les tâches GitHub. Par exemple, un script pour cloner et naviguer dans un dépôt :
+
+```bash
+#!/bin/bash
+
+# Cloner et ouvrir un dépôt
+gh repo clone utilisateur/repo && cd repo && gh repo view --web
+```
+
+## Consulter et télécharger les Releases
+
+Listez les dernières releases :
+
+```bash
+gh release list
+```
+
+Téléchargez des assets spécifiques de la dernière release :
+
+```bash
+gh release download --pattern "*.zip"
+```
+=======
 
 
 
@@ -1533,3 +1615,4 @@ gh alias set creer-repo 'repo create'
 ``
 
 ***
+
