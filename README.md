@@ -1,4 +1,4 @@
-# cheat-sheets-github-cli
+# Cheat-sheets-github-cli
 
 # Introduction à GitHub CLI
 
@@ -110,6 +110,127 @@ gh auth login
 ```
 
 Suivez les instructions à l'écran pour authentifier.
+
+
+# CONFIGURATION
+
+### Step 1: GitHub Authentication
+
+Pour vous connecter à votre compte GitHub via la ligne de commande, utilisez la commande suivante :
+
+```
+gh auth login
+```
+
+Suivez les instructions à l'écran pour vous authentifier à votre compte GitHub.
+
+***
+
+### Step 2 : Code Editor Configuration
+
+Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
+
+``
+gh config set editor code
+``
+
+***
+
+### Step 3 : Alias
+
+Déclarer des alias pour les commandes que vous utilisez fréquemment, utilisez la commande `gh alias set`. 
+Si vous souhaitez créer un alias pour la commande `gh repo create`, vous pouvez le faire de la manière suivante :
+
+``
+gh alias set creer-repo 'repo create'
+``
+
+## Les bases de l'utilisation de GitHub CLI
+
+Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
+
+### Les commandes de bases
+
+Entrez <code>gh status</code> pour voir les détails de votre travail actuel sur GitHub dans tous les référentiels.
+
+``` 
+gh status
+```
+Entrez <code>gh help</code> pour obtenir de l'aide directement dans l'application.
+```
+gh help
+ ```
+
+### personnaliser son GitHub CLI
+
+Pour adapter son GitHub CLI de la manière qui convient le mieux, il est possible de configurer et ajouter des alias et des extensions.
+
+pour configurer les paramètres de GitHub CLI, entrez <code>gh config set SUBCOMMANDS</code>, en remplacant SUBCOMMANDS par le paramètre à ajuster.
+
+Par exemple, pour redéfinir votre éditeur de texte préféré sur Visual Studio Code, entrez:
+```
+ gh config set editor "code -w" 
+ ```
+Dans ce cas l'indicateur <code>-w</code> fait en sorte que la commande attende que le fichier soit fermé dans Visual Studio Code avant de passer à l'étape suivante dans votre terminal.
+
+### Travailler sur les repo GitHub
+
+Pour créer un nouveau dépôt, utilisez la commande <code>gh repo create</code>.
+```
+gh repo create
+```
+
+
+
+Pour fork un dépôt, utilisez la commande <code>gh repo fork</code>.
+```
+gh repo create
+```
+
+ <code>--add-readme</code>: cré un fichier README dans le dépôt.
+
+ <code>-c </code>, <code>--clone </code>: Clone le dépôt.
+
+ <code>-d </code>, <code>--description < string > </code>: Description du dépôt.
+
+ <code>-g </code>, <code>--gitignore < string > </code>: génère un gitignore pour le dépôt.
+
+<code>--private </code> ou <code>--public </code>: rend le dépôt privé/public.
+
+<code>--push </code> Push le commits dans le dépôt.
+
+### Génération des Issue
+
+Pour générer un "issue" utilisez la commande <code>gh issue create</code>.
+Il est possible d'y ajouter un titre (<code>--title "text"</code>), un corp (<code>--body "text"</code>), ou encore un label (<code>--label "text"</code>).
+```
+gh issue create
+```
+
+### Création des Pull Request
+
+Pour créer un Pull Request utilisez la commande <code>gh pr create</code>, puis suivre les instructions dans le Terminal.
+```
+gh pr create
+```
+
+Il est possible de lister les Pull Request en cour avec la commande <code>gh pr list</code>. 
+```
+gh pr list
+```
+La liste indiquera le numéro de la Pull Request à utilister dans le Terminal. Par exemple pour voir le Pull Request dans le Terminal utilisez la commande <code>gh pr view 1</code>, pour voir la première Pull Request.
+
+Pour voir les conflits entre la branche principale et la Pull Request, utilisez la commande <code>gh pr diff 1</code> (pour le premier Pull Resquest).
+
+Il est aussi possible de commenter la commande <code>gh pr comment 1 "votre commentaire"</code>.
+
+Lorsque le  Pull Request est terminée, il est possible de le fermer avec la commande  <code>gh pr close 1</code> (pour le premier Pull Request).
+```
+gh pr close 1 -d
+```
+Il sera possible de réouvrire le Pull Request avec <code>gh pr reopen 1</code>.
+
+A tout moment, il est possible de verifier le status du Pull Request avec la commande <code>gh pr status</code>
 
 # Astuces pour GitHub CLI
 
@@ -270,198 +391,6 @@ Pour supprimer un alias:
 gh alias delete <alias>
 ```
 
-Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus rapide.
-
-
-
-
-
-
-
-***
-
-# CONFIGURATION
-
-### Step 1: GitHub Authentication
-
-Pour vous connecter à votre compte GitHub via la ligne de commande, utilisez la commande suivante :
-
-```
-gh auth login
-```
-
-Suivez les instructions à l'écran pour vous authentifier à votre compte GitHub.
-
-***
-
-### Step 2 : Code Editor Configuration
-
-Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
-
-``
-gh config set editor code
-``
-
-***
-
-### Step 3 : Alias
-
-Déclarer des alias pour les commandes que vous utilisez fréquemment, utilisez la commande `gh alias set`. 
-Si vous souhaitez créer un alias pour la commande `gh repo create`, vous pouvez le faire de la manière suivante :
-
-``
-gh alias set creer-repo 'repo create'
-``
-
-
-
-
-
-
-
-
-
-
-## Les bases de l'utilisation de GitHub CLI
+Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus ra## Les bases de l'utilisation de GitHub CLI
 
 Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
-
-### Les commandes de bases
-
-Entrez <code>gh status</code> pour voir les détails de votre travail actuel sur GitHub dans tous les référentiels.
-
-``` 
-gh status
-```
-Entrez <code>gh help</code> pour obtenir de l'aide directement dans l'application.
-```
-gh help
- ```
-
-### personnaliser son GitHub CLI
-
-Pour adapter son GitHub CLI de la manière qui convient le mieux, il est possible de configurer et ajouter des alias et des extensions.
-
-pour configurer les paramètres de GitHub CLI, entrez <code>gh config set SUBCOMMANDS</code>, en remplacant SUBCOMMANDS par le paramètre à ajuster.
-
-Par exemple, pour redéfinir votre éditeur de texte préféré sur Visual Studio Code, entrez:
-```
- gh config set editor "code -w" 
- ```
-Dans ce cas l'indicateur <code>-w</code> fait en sorte que la commande attende que le fichier soit fermé dans Visual Studio Code avant de passer à l'étape suivante dans votre terminal.
-
-### Travailler sur les repo GitHub
-
-Pour créer un nouveau dépôt, utilisez la commande <code>gh repo create</code>.
-```
-gh repo create
-```
-
-
-
-Pour fork un dépôt, utilisez la commande <code>gh repo fork</code>.
-```
-gh repo create
-```
-
- <code>--add-readme</code>: cré un fichier README dans le dépôt.
-
- <code>-c </code>, <code>--clone </code>: Clone le dépôt.
-
- <code>-d </code>, <code>--description < string > </code>: Description du dépôt.
-
- <code>-g </code>, <code>--gitignore < string > </code>: génère un gitignore pour le dépôt.
-
-<code>--private </code> ou <code>--public </code>: rend le dépôt privé/public.
-
-<code>--push </code> Push le commits dans le dépôt.
-
-### Génération des Issue
-
-Pour générer un "issue" utilisez la commande <code>gh issue create</code>.
-Il est possible d'y ajouter un titre (<code>--title "text"</code>), un corp (<code>--body "text"</code>), ou encore un label (<code>--label "text"</code>).
-```
-gh issue create
-```
-
-### Création des Pull Request
-
-Pour créer un Pull Request utilisez la commande <code>gh pr create</code>, puis suivre les instructions dans le Terminal.
-```
-gh pr create
-```
-
-Il est possible de lister les Pull Request en cour avec la commande <code>gh pr list</code>. 
-```
-gh pr list
-```
-La liste indiquera le numéro de la Pull Request à utilister dans le Terminal. Par exemple pour voir le Pull Request dans le Terminal utilisez la commande <code>gh pr view 1</code>, pour voir la première Pull Request.
-
-Pour voir les conflits entre la branche principale et la Pull Request, utilisez la commande <code>gh pr diff 1</code> (pour le premier Pull Resquest).
-
-Il est aussi possible de commenter la commande <code>gh pr comment 1 "votre commentaire"</code>.
-
-Lorsque le  Pull Request est terminée, il est possible de le fermer avec la commande  <code>gh pr close 1</code> (pour le premier Pull Request).
-```
-gh pr close 1 -d
-```
-Il sera possible de réouvrire le Pull Request avec <code>gh pr reopen 1</code>.
-
-A tout moment, il est possible de verifier le status du Pull Request avec la commande <code>gh pr status</code>.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-# CONFIGURATION
-
-### Step 1: GitHub Authentication
-
-Pour vous connecter à votre compte GitHub via la ligne de commande, utilisez la commande suivante :
-
-```
-gh auth login
-```
-
-Suivez les instructions à l'écran pour vous authentifier à votre compte GitHub.
-
-***
-
-### Step 2 : Code Editor Configuration
-
-Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
-
-``
-gh config set editor code
-``
-
-***
-
-### Step 3 : Alias
-
-Déclarer des alias pour les commandes que vous utilisez fréquemment, utilisez la commande `gh alias set`. 
-Si vous souhaitez créer un alias pour la commande `gh repo create`, vous pouvez le faire de la manière suivante :
-
-``
-gh alias set creer-repo 'repo create'
-``
-# GitHub comment ça marche !
-# GitHub CLI est un outil open source permettant d’utiliser GitHub à partir de la ligne de commande de votre ordinateur. Lorsque vous travaillez à partir de la ligne de commande, vous pouvez utiliser l’interface de ligne de commande GitHub pour gagner du temps et éviter de changer de contexte. GitHub CLI inclut des fonctionnalités GitHub telles que : Afficher, créer, cloner et dupliquer des dépôts Créer, fermer, modifier et afficher des problèmes et des demandes de .
-# GitHub CLI est un outil de ligne de commande qui apporte les demandes de tirage, les problèmes, les actions GitHub et d’autres fonctionnalités GitHub à votre terminal, afin que vous puissiez effectuer tout votre travail en un seul endroit.
-# Quelle est la différence entre GitHub CLI et Git sur la ligne de commande ?
-# L’interface de ligne de commande Git (git) vous permet de travailler avec un référentiel Git local ou distant. Le dépôt distant peut être hébergé sur GitHub ou par un autre service.
-# GitHub CLI (gh) est spécifiquement destiné à l’utilisation de GitHub. Il vous permet d’utiliser la ligne de commande pour interagir avec GitHub de toutes sortes de façons, comme illustré par la liste précédente. Si vous avez tendance à travailler sur la ligne de commande, vous préférerez peut-être utiliser GitHub CLI plutôt que d’utiliser GitHub dans un navigateur. GitHub CLI vous permet également de créer plus facilement des scripts pour automatiser les opérations GitHub.
-# Comparaison avec le hub:
-# Pendant de nombreuses années, hub a été l’outil CLI GitHub non officiel. gh est un nouveau projet qui nous aide à explorer à quoi peut ressembler un outil CLI GitHub officiel avec un design fondamentalement différent. Alors que les deux outils apportent GitHub au terminal, hub se comporte comme un proxy de git, et gh est un outil autonome. Consultez notre explication plus détaillée pour en savoir plus.
-
