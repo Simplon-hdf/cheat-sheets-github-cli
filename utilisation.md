@@ -1,3 +1,4 @@
+<a href="README.md">Table des Matières</a>
 # Les bases de l'utilisation de GitHub CLI
 
 Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
@@ -64,7 +65,8 @@ Pour créer un Pull Request utilisez la commande <code>gh pr create</code>, puis
 ```
 gh pr create
 ```
-
+<p align="center"><img src="images/prCreate.png" /></p>
+<br>
 Il est possible de lister les Pull Request en cour avec la commande <code>gh pr list</code>. 
 ```
 gh pr list
@@ -166,7 +168,8 @@ Créez des alias pour simplifier les commandes longues ou fréquentes. Par exemp
 gh alias set prl 'pr list --limit 10'
 gh prl
 ```
-
+<p align="center"><img src="images/prCreate.png" /></p>
+<br>
 ### Scripts et automatisation
 
 Intégrez `gh` dans vos scripts pour automatiser les tâches GitHub. Par exemple, un script pour cloner et naviguer dans un dépôt :

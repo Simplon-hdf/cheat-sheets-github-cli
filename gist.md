@@ -1,3 +1,5 @@
+<a href="README.md">Table des Matières</a>
+
 # Gestion des Gists GitHub avec GitHub CLI
 
 ### Qu'est-ce qu'un Gist ?
@@ -19,13 +21,6 @@ gh gist create <filename>
 - `<filename>` : le fichier que vous souhaitez télécharger en tant que gist.
 
 
-### Code Editor Configuration
-
-Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
-
-```
-gh config set editor code
-```
 ### Lister vos Gists
 
 Pour voir la liste de vos gists :
@@ -82,3 +77,6 @@ L'utilisation de `gh` pour les gists permet une intégration fluide et rapide av
 ```bash
 gh gist --help
 ```
+
+<p align="center"><img src="images/gistHelp.png" /></p>
+<br>
