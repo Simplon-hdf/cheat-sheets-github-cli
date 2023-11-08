@@ -111,10 +111,6 @@ gh auth login
 
 Suivez les instructions à l'écran pour authentifier.
 
-Bien sûr, voici un exemple plus succinct de document Markdown contenant uniquement des astuces pour une utilisation efficace de GitHub CLI:
-
-```markdown
-
 # Astuces pour GitHub CLI
 
 Utiliser GitHub CLI (`gh`) peut rendre votre flux de travail plus rapide et plus direct. Voici quelques astuces pour les développeurs qui débutent avec `gh`.
