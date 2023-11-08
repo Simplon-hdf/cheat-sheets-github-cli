@@ -509,3 +509,15 @@ Utilisez les gists pour partager rapidement des bouts de code ou pour sauvegarde
 Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus ra## Les bases de l'utilisation de GitHub CLI
 
 Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
+
+ GitHub CLI est un outil open source permettant d’utiliser GitHub à partir de la ligne de commande de votre ordinateur.
+ Lorsque vous travaillez à partir de la ligne de commande, vous pouvez utiliser l’interface de ligne de commande GitHub pour gagner du temps et éviter de changer de contexte.
+ GitHub CLI inclut des fonctionnalités GitHub telles que : Afficher, créer, cloner et dupliquer des dépôts Créer, fermer, modifier et afficher des problèmes et des demandes de tirage.
+ GitHub CLI est un outil de ligne de commande qui apporte les demandes de tirage, les problèmes, les actions GitHub et d’autres fonctionnalités GitHub à votre terminal, afin que vous puissiez effectuer tout votre travail en un seul endroit.
+ Quelle est la différence entre GitHub CLI et Git sur la ligne de commande ?
+ L’interface de ligne de commande Git (git) vous permet de travailler avec un référentiel Git local ou distant. Le dépôt distant peut être hébergé sur GitHub ou par un autre service.
+ GitHub CLI (gh) est spécifiquement destiné à l’utilisation de GitHub. Il vous permet d’utiliser la ligne de commande pour interagir avec GitHub de toutes sortes de façons, comme illustré par la liste précédente. Si vous avez tendance à travailler sur la ligne de commande, vous préférerez peut-être utiliser GitHub CLI plutôt que d’utiliser GitHub dans un navigateur. GitHub CLI vous permet également de créer plus facilement des scripts pour automatiser les opérations GitHub.
+ Comparaison avec le hub: Pendant de nombreuses années, hub a été l’outil CLI GitHub non officiel. gh est un nouveau projet qui nous aide à explorer à quoi peut ressembler un outil CLI GitHub officiel avec un design fondamentalement différent. Alors que les deux outils apportent GitHub au terminal, hub se comporte comme un proxy de git, et gh est un outil autonome. Consultez notre explication plus détaillée pour en savoir plus.
+
+ ***
+
