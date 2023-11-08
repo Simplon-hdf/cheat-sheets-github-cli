@@ -421,6 +421,91 @@ Pour supprimer un alias:
 gh alias delete <alias>
 ```
 
+Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow.
+# Gestion des Gists GitHub avec GitHub CLI
+
+## Qu'est-ce qu'un Gist ?
+
+Les gists sont un moyen simple de partager des extraits de code et d'autres petits morceaux de texte avec d'autres. Tandis que les dépôts GitHub sont destinés à des projets plus grands, les gists sont idéaux pour des morceaux de code isolés, des scripts, des notes ou des snippets. Chaque gist est sauvegardé dans un dépôt Git, ce qui signifie qu'ils peuvent être versionnés, forkés et clonés.
+
+Les gists peuvent être créés soit en tant que fichiers publics que tout le monde peut voir et partager, soit en tant que fichiers privés accessibles uniquement à l'utilisateur.
+
+## Création d'un Gist
+
+Pour créer un nouveau gist :
+
+```bash
+gh gist create <filename>
+```
+
+- `<filename>` : le fichier que vous souhaitez télécharger en tant que gist.
+
+Pour créer un gist avec du contenu directement depuis la ligne de commande :
+
+```bash
+echo "Votre contenu ici" | gh gist create -
+```
+
+- Le `-` indique à `gh` de lire le contenu du standard input.
+
+## Lister vos Gists
+
+Pour voir la liste de vos gists :
+
+```bash
+gh gist list
+```
+
+## Voir un Gist
+
+Pour afficher le contenu d'un gist :
+
+```bash
+gh gist view <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez visualiser.
+
+## Éditer un Gist
+
+Pour éditer un gist existant :
+
+```bash
+gh gist edit <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez éditer.
+
+## Cloner un Gist
+
+Pour cloner un gist dans un répertoire local :
+
+```bash
+gh gist clone <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez cloner.
+
+## Supprimer un Gist
+
+Pour supprimer un gist :
+
+```bash
+gh gist delete <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez supprimer.
+
+## Conclusion
+
+L'utilisation de `gh` pour les gists permet une intégration fluide et rapide avec votre flux de travail en ligne de commande. Pour plus de détails sur les commandes `gh gist`, vous pouvez toujours exécuter :
+
+```bash
+gh gist --help
+```
+
+Utilisez les gists pour partager rapidement des bouts de code ou pour sauvegarder des fragments de texte pour un usage futur, tout cela directement depuis votre terminal.
+  
 Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus ra## Les bases de l'utilisation de GitHub CLI
 
 Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
