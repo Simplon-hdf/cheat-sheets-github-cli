@@ -232,6 +232,36 @@ Il sera possible de réouvrire le Pull Request avec <code>gh pr reopen 1</code>.
 
 A tout moment, il est possible de verifier le status du Pull Request avec la commande <code>gh pr status</code>
 
+
+## Les extensions CLI
+
+
+Les extensions CLI GitHub sont des dépôts qui fournissent des commandes gh supplémentaires.
+
+
+
+Les noms d'extensions comment par <code>gh-</code> et doivent contenir un executable du même nom. 
+
+La commande <code>gh extension brows [flags]</code> permet de rechercher, ajouter ou retirer vos extensions GitHub.
+ ```
+gh extension brows
+```
+Elles sont utilisées pour chatouiller la rétine de l'utilisateur, avoir des informations complémenteur depuis GitHub CLI, ou même pour chater et faire des graphiques! Les extensions sont nombreuses, et vous y trouverez forcement votre bonheur pour pimper votre CLI.
+
+Vous trouverez une liste d'extensions à ce lien:  https://github.com/topics/gh-extension
+
+# Installer des extensions
+
+Pour installer une extensions, utilisez la commande <code>gh extensions install (url du repo)</code>. par exemple, pour l'extention "whoami":
+```
+gh extension install https://github.com/mislav/gh-branch
+```
+
+Vous trouverez de super extensions sur ce dépôt :https://github.com/kodepandai/awesome-gh-cli-extensions
+
+
+
+
 # Astuces pour GitHub CLI
 
 Utiliser GitHub CLI (`gh`) peut rendre votre flux de travail plus rapide et plus direct. Voici quelques astuces pour les développeurs qui débutent avec `gh`.
