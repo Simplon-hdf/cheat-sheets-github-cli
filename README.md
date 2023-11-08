@@ -1,6 +1,6 @@
 # cheat-sheets-github-cli
 
-# Introduction à GitHub CLI
+## Introduction à GitHub CLI
 
 Bienvenue dans la documentation dédiée à GitHub CLI, l'outil en ligne de commande qui vise à améliorer et à optimiser votre flux de travail avec GitHub directement depuis votre terminal.
 
@@ -12,8 +12,6 @@ Avec GitHub CLI, vous pouvez effectuer presque toutes les opérations que vous f
 
 ## Pourquoi utiliser GitHub CLI?
 
-Voici quelques avantages clés qui pourraient vous inciter à adopter GitHub CLI:
-
 1. **Efficacité accrue**: Effectuez des tâches courantes en moins de commandes et sans quitter le contexte de votre projet.
 2. **Automatisation simplifiée**: Intégrez facilement des opérations GitHub dans vos scripts pour automatiser votre workflow.
 3. **Moins de context switching**: Réduisez les interruptions en restant dans le terminal, l'outil que vous utilisez déjà pour le développement.
@@ -22,6 +20,8 @@ Voici quelques avantages clés qui pourraient vous inciter à adopter GitHub CLI
 6. **Expérience unifiée**: Que vous travailliez en solo ou en équipe, GitHub CLI offre une expérience cohérente pour tous les membres du projet.
 
 Dans les sections suivantes, nous explorerons comment installer GitHub CLI, le configurer, et commencer à l'utiliser pour accélérer et simplifier votre interaction avec vos dépôts GitHub. Que vous soyez nouveau sur GitHub ou un vétéran cherchant à optimiser votre flux de travail, GitHub CLI est un outil indispensable à ajouter à votre arsenal de développement.
+
+***
 
 # Installer GitHub CLI
 
@@ -35,13 +35,11 @@ scoop install gh
 
 ### Avec Chocolatey
 
-Ouvrez PowerShell en tant qu'administrateur et exécutez :
-
 ```bash
 choco install gh
 ```
 
-### Installation manuelle
+## Installation manuelle
 
 Téléchargez le fichier **.msi** depuis la [page des releases de GitHub CLI](https://cli.github.com/), exécutez-le et suivez les instructions.
 
@@ -55,13 +53,11 @@ brew install gh
 
 ### Avec MacPorts
 
+Téléchargez le fichier **.pkg** depuis la [page des releases de GitHub CLI](https://cli.github.com/), ouvrez-le et suivez les instructions.
+
 ```bash
 sudo port install gh
 ```
-
-### Installation manuelle
-
-Téléchargez le fichier **.pkg** depuis la [page des releases de GitHub CLI](https://cli.github.com/), ouvrez-le et suivez les instructions.
 
 ## Linux
 
@@ -86,30 +82,19 @@ sudo yum install gh
 
 ### Sur Arch Linux avec pacman
 
+Téléchargez le fichier **.tar.gz** depuis la [page des releases de GitHub CLI](https://cli.github.com/), décompressez-le et suivez les instructions du README.
+
 ```bash 
 sudo pacman -S github-cli
 ```
 
-### Installation manuelle
-
-Téléchargez le fichier **.tar.gz** depuis la [page des releases de GitHub CLI](https://cli.github.com/), décompressez-le et suivez les instructions du README.
-
 ## Vérification de l'installation
 
-Après installation, vérifiez en tapant :
 ```bash
 gh --version
 ```
 
-## Authentification
-
-Pour vous connecter à GitHub via gh :
-
-```bash
-gh auth login
-```
-
-Suivez les instructions à l'écran pour authentifier.
+***
 
 # Astuces pour GitHub CLI
 
@@ -117,7 +102,7 @@ Utiliser GitHub CLI (`gh`) peut rendre votre flux de travail plus rapide et plus
 
 ## Authentification simplifiée
 
-Utilisez SSH pour l'authentification pour éviter de saisir vos identifiants à chaque fois :
+Utilisez SSH pour l'authentification :
 
 ```bash
 gh auth login -h github.com -p ssh
@@ -192,7 +177,8 @@ Téléchargez des assets spécifiques de la dernière release :
 ```bash
 gh release download --pattern "*.zip"
 ```
-GitHub CLI (`gh`) est un outil puissant pour interagir avec GitHub directement depuis votre terminal. Voici un "cheat sheet" des commandes de base et quelques alias que vous pouvez configurer pour raccourcir ces commandes.
+
+***
 
 ### Cheat Sheet de Commandes `gh`
 
@@ -236,53 +222,11 @@ GitHub CLI (`gh`) est un outil puissant pour interagir avec GitHub directement d
 - `gh workflow disable <workflow_id>` : Désactiver un workflow.
 - `gh workflow enable <workflow_id>` : Activer un workflow.
 
-**Alias:**
-
-GitHub CLI vous permet de créer des alias pour les commandes, afin de réduire la quantité de frappe nécessaire pour les exécuter.
-
-Pour configurer un alias dans `gh`, utilisez la commande suivante:
-
-```sh
-gh alias set <alias> '<commande>'
-```
-
-Par exemple:
-
-- `gh alias set prl 'pr list'` : Crée un alias `prl` pour `gh pr list`.
-- `gh alias set vic 'issue create'` : Crée un alias `vic` pour `gh issue create`.
-- `gh alias set vpr 'pr view'` : Crée un alias `vpr` pour `gh pr view`.
-
-Pour utiliser un alias, tapez simplement `gh` suivi de l'alias:
-
-```sh
-gh prl
-```
-
-Pour voir tous vos alias:
-
-```sh
-gh alias list
-```
-
-Pour supprimer un alias:
-
-```sh
-gh alias delete <alias>
-```
-
-Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus rapide.
-
-
-
-
-
-
-
 ***
 
 # CONFIGURATION
 
-### Step 1: GitHub Authentication
+## 1: GitHub Authentication
 
 Pour vous connecter à votre compte GitHub via la ligne de commande, utilisez la commande suivante :
 
@@ -294,7 +238,7 @@ Suivez les instructions à l'écran pour vous authentifier à votre compte GitHu
 
 ***
 
-### Step 2 : Code Editor Configuration
+## 2 : Code Editor Configuration
 
 Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
 
@@ -304,7 +248,7 @@ gh config set editor code
 
 ***
 
-### Step 3 : Alias
+## 3 : Alias
 
 Déclarer des alias pour les commandes que vous utilisez fréquemment, utilisez la commande `gh alias set`. 
 Si vous souhaitez créer un alias pour la commande `gh repo create`, vous pouvez le faire de la manière suivante :
@@ -313,20 +257,29 @@ Si vous souhaitez créer un alias pour la commande `gh repo create`, vous pouvez
 gh alias set creer-repo 'repo create'
 ``
 
+### Exemple :
 
+- `gh alias set prl 'pr list'` : Crée un alias `prl` pour `gh pr list`.
+- `gh alias set vic 'issue create'` : Crée un alias `vic` pour `gh issue create`.
+- `gh alias set vpr 'pr view'` : Crée un alias `vpr` pour `gh pr view`.
 
+### Pour voir tous vos alias:
+```sh
+gh alias list
+```
 
+### Pour supprimer un alias:
+```sh
+gh alias delete <alias>
+```
 
+***
 
-
-
-
-
-## Les bases de l'utilisation de GitHub CLI
+# Les bases de l'utilisation de GitHub CLI
 
 Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
 
-### Les commandes de bases
+## Les commandes de bases
 
 Entrez <code>gh status</code> pour voir les détails de votre travail actuel sur GitHub dans tous les référentiels.
 
@@ -338,7 +291,7 @@ Entrez <code>gh help</code> pour obtenir de l'aide directement dans l'applicatio
 gh help
  ```
 
-### personnaliser son GitHub CLI
+## Personnaliser son GitHub CLI
 
 Pour adapter son GitHub CLI de la manière qui convient le mieux, il est possible de configurer et ajouter des alias et des extensions.
 
@@ -346,18 +299,16 @@ pour configurer les paramètres de GitHub CLI, entrez <code>gh config set SUBCOM
 
 Par exemple, pour redéfinir votre éditeur de texte préféré sur Visual Studio Code, entrez:
 ```
- gh config set editor "code -w" 
- ```
+gh config set editor "code -w" 
+```
 Dans ce cas l'indicateur <code>-w</code> fait en sorte que la commande attende que le fichier soit fermé dans Visual Studio Code avant de passer à l'étape suivante dans votre terminal.
 
-### Travailler sur les repo GitHub
+## Travailler sur les repo GitHub
 
 Pour créer un nouveau dépôt, utilisez la commande <code>gh repo create</code>.
 ```
 gh repo create
 ```
-
-
 
 Pour fork un dépôt, utilisez la commande <code>gh repo fork</code>.
 ```
@@ -372,11 +323,11 @@ gh repo create
 
  <code>-g </code>, <code>--gitignore < string > </code>: génère un gitignore pour le dépôt.
 
-<code>--private </code> ou <code>--public </code>: rend le dépôt privé/public.
+ <code>--private </code> ou <code>--public </code>: rend le dépôt privé/public.
 
-<code>--push </code> Push le commits dans le dépôt.
+ <code>--push </code> Push le commits dans le dépôt.
 
-### Génération des Issue
+## Génération des Issue
 
 Pour générer un "issue" utilisez la commande <code>gh issue create</code>.
 Il est possible d'y ajouter un titre (<code>--title "text"</code>), un corp (<code>--body "text"</code>), ou encore un label (<code>--label "text"</code>).
@@ -384,7 +335,7 @@ Il est possible d'y ajouter un titre (<code>--title "text"</code>), un corp (<co
 gh issue create
 ```
 
-### Création des Pull Request
+## Création des Pull Request
 
 Pour créer un Pull Request utilisez la commande <code>gh pr create</code>, puis suivre les instructions dans le Terminal.
 ```
@@ -408,52 +359,3 @@ gh pr close 1 -d
 Il sera possible de réouvrire le Pull Request avec <code>gh pr reopen 1</code>.
 
 A tout moment, il est possible de verifier le status du Pull Request avec la commande <code>gh pr status</code>.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-# CONFIGURATION
-
-### Step 1: GitHub Authentication
-
-Pour vous connecter à votre compte GitHub via la ligne de commande, utilisez la commande suivante :
-
-```
-gh auth login
-```
-
-Suivez les instructions à l'écran pour vous authentifier à votre compte GitHub.
-
-***
-
-### Step 2 : Code Editor Configuration
-
-Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
-
-``
-gh config set editor code
-``
-
-***
-
-### Step 3 : Alias
-
-Déclarer des alias pour les commandes que vous utilisez fréquemment, utilisez la commande `gh alias set`. 
-Si vous souhaitez créer un alias pour la commande `gh repo create`, vous pouvez le faire de la manière suivante :
-
-``
-gh alias set creer-repo 'repo create'
-``
-
