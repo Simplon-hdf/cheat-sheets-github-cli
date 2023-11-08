@@ -170,6 +170,7 @@ gh prl
 ```
 <p align="center"><img src="images/prCreate.png" /></p>
 <br>
+
 ### Scripts et automatisation
 
 Intégrez `gh` dans vos scripts pour automatiser les tâches GitHub. Par exemple, un script pour cloner et naviguer dans un dépôt :
