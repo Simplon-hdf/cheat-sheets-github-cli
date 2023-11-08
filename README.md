@@ -391,4 +391,6 @@ Pour supprimer un alias:
 gh alias delete <alias>
 ```
 
-Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus rapide.
+Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus ra## Les bases de l'utilisation de GitHub CLI
+
+Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
