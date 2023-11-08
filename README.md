@@ -232,6 +232,36 @@ Il sera possible de réouvrire le Pull Request avec <code>gh pr reopen 1</code>.
 
 A tout moment, il est possible de verifier le status du Pull Request avec la commande <code>gh pr status</code>
 
+
+## Les extensions CLI
+
+
+Les extensions CLI GitHub sont des dépôts qui fournissent des commandes gh supplémentaires.
+
+
+
+Les noms d'extensions comment par <code>gh-</code> et doivent contenir un executable du même nom. 
+
+La commande <code>gh extension brows [flags]</code> permet de rechercher, ajouter ou retirer vos extensions GitHub.
+ ```
+gh extension brows
+```
+Elles sont utilisées pour chatouiller la rétine de l'utilisateur, avoir des informations complémenteur depuis GitHub CLI, ou même pour chater et faire des graphiques! Les extensions sont nombreuses, et vous y trouverez forcement votre bonheur pour pimper votre CLI.
+
+Vous trouverez une liste d'extensions à ce lien:  https://github.com/topics/gh-extension
+
+# Installer des extensions
+
+Pour installer une extensions, utilisez la commande <code>gh extensions install (url du repo)</code>. par exemple, pour l'extention "whoami":
+```
+gh extension install https://github.com/mislav/gh-branch
+```
+
+Vous trouverez de super extensions sur ce dépôt :https://github.com/kodepandai/awesome-gh-cli-extensions
+
+
+
+
 # Astuces pour GitHub CLI
 
 Utiliser GitHub CLI (`gh`) peut rendre votre flux de travail plus rapide et plus direct. Voici quelques astuces pour les développeurs qui débutent avec `gh`.
@@ -391,15 +421,103 @@ Pour supprimer un alias:
 gh alias delete <alias>
 ```
 
+Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow.
+# Gestion des Gists GitHub avec GitHub CLI
+
+## Qu'est-ce qu'un Gist ?
+
+Les gists sont un moyen simple de partager des extraits de code et d'autres petits morceaux de texte avec d'autres. Tandis que les dépôts GitHub sont destinés à des projets plus grands, les gists sont idéaux pour des morceaux de code isolés, des scripts, des notes ou des snippets. Chaque gist est sauvegardé dans un dépôt Git, ce qui signifie qu'ils peuvent être versionnés, forkés et clonés.
+
+Les gists peuvent être créés soit en tant que fichiers publics que tout le monde peut voir et partager, soit en tant que fichiers privés accessibles uniquement à l'utilisateur.
+
+## Création d'un Gist
+
+Pour créer un nouveau gist :
+
+```bash
+gh gist create <filename>
+```
+
+- `<filename>` : le fichier que vous souhaitez télécharger en tant que gist.
+
+Pour créer un gist avec du contenu directement depuis la ligne de commande :
+
+```bash
+echo "Votre contenu ici" | gh gist create -
+```
+
+- Le `-` indique à `gh` de lire le contenu du standard input.
+
+## Lister vos Gists
+
+Pour voir la liste de vos gists :
+
+```bash
+gh gist list
+```
+
+## Voir un Gist
+
+Pour afficher le contenu d'un gist :
+
+```bash
+gh gist view <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez visualiser.
+
+## Éditer un Gist
+
+Pour éditer un gist existant :
+
+```bash
+gh gist edit <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez éditer.
+
+## Cloner un Gist
+
+Pour cloner un gist dans un répertoire local :
+
+```bash
+gh gist clone <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez cloner.
+
+## Supprimer un Gist
+
+Pour supprimer un gist :
+
+```bash
+gh gist delete <gist-id>
+```
+
+- `<gist-id>` : l'identifiant du gist que vous souhaitez supprimer.
+
+## Conclusion
+
+L'utilisation de `gh` pour les gists permet une intégration fluide et rapide avec votre flux de travail en ligne de commande. Pour plus de détails sur les commandes `gh gist`, vous pouvez toujours exécuter :
+
+```bash
+gh gist --help
+```
+
+Utilisez les gists pour partager rapidement des bouts de code ou pour sauvegarder des fragments de texte pour un usage futur, tout cela directement depuis votre terminal.
+  
 Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus ra## Les bases de l'utilisation de GitHub CLI
 
 Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps et éviter de changer de contexte, et d'interface.
 
-# GitHub CLI est un outil open source permettant d’utiliser GitHub à partir de la ligne de commande de votre ordinateur.
-# Lorsque vous travaillez à partir de la ligne de commande, vous pouvez utiliser l’interface de ligne de commande GitHub pour gagner du temps et éviter de changer de contexte.
-# GitHub CLI inclut des fonctionnalités GitHub telles que : Afficher, créer, cloner et dupliquer des dépôts Créer, fermer, modifier et afficher des problèmes et des demandes de tirage.
-# GitHub CLI est un outil de ligne de commande qui apporte les demandes de tirage, les problèmes, les actions GitHub et d’autres fonctionnalités GitHub à votre terminal, afin que vous puissiez effectuer tout votre travail en un seul endroit.
-# Quelle est la différence entre GitHub CLI et Git sur la ligne de commande ?
-# L’interface de ligne de commande Git (git) vous permet de travailler avec un référentiel Git local ou distant. Le dépôt distant peut être hébergé sur GitHub ou par un autre service.
-# GitHub CLI (gh) est spécifiquement destiné à l’utilisation de GitHub. Il vous permet d’utiliser la ligne de commande pour interagir avec GitHub de toutes sortes de façons, comme illustré par la liste précédente. Si vous avez tendance à travailler sur la ligne de commande, vous préférerez peut-être utiliser GitHub CLI plutôt que d’utiliser GitHub dans un navigateur. GitHub CLI vous permet également de créer plus facilement des scripts pour automatiser les opérations GitHub.
-# Comparaison avec le hub: Pendant de nombreuses années, hub a été l’outil CLI GitHub non officiel. gh est un nouveau projet qui nous aide à explorer à quoi peut ressembler un outil CLI GitHub officiel avec un design fondamentalement différent. Alors que les deux outils apportent GitHub au terminal, hub se comporte comme un proxy de git, et gh est un outil autonome. Consultez notre explication plus détaillée pour en savoir plus.
+ GitHub CLI est un outil open source permettant d’utiliser GitHub à partir de la ligne de commande de votre ordinateur.
+ Lorsque vous travaillez à partir de la ligne de commande, vous pouvez utiliser l’interface de ligne de commande GitHub pour gagner du temps et éviter de changer de contexte.
+ GitHub CLI inclut des fonctionnalités GitHub telles que : Afficher, créer, cloner et dupliquer des dépôts Créer, fermer, modifier et afficher des problèmes et des demandes de tirage.
+ GitHub CLI est un outil de ligne de commande qui apporte les demandes de tirage, les problèmes, les actions GitHub et d’autres fonctionnalités GitHub à votre terminal, afin que vous puissiez effectuer tout votre travail en un seul endroit.
+ Quelle est la différence entre GitHub CLI et Git sur la ligne de commande ?
+ L’interface de ligne de commande Git (git) vous permet de travailler avec un référentiel Git local ou distant. Le dépôt distant peut être hébergé sur GitHub ou par un autre service.
+ GitHub CLI (gh) est spécifiquement destiné à l’utilisation de GitHub. Il vous permet d’utiliser la ligne de commande pour interagir avec GitHub de toutes sortes de façons, comme illustré par la liste précédente. Si vous avez tendance à travailler sur la ligne de commande, vous préférerez peut-être utiliser GitHub CLI plutôt que d’utiliser GitHub dans un navigateur. GitHub CLI vous permet également de créer plus facilement des scripts pour automatiser les opérations GitHub.
+ Comparaison avec le hub: Pendant de nombreuses années, hub a été l’outil CLI GitHub non officiel. gh est un nouveau projet qui nous aide à explorer à quoi peut ressembler un outil CLI GitHub officiel avec un design fondamentalement différent. Alors que les deux outils apportent GitHub au terminal, hub se comporte comme un proxy de git, et gh est un outil autonome. Consultez notre explication plus détaillée pour en savoir plus.
+
+ ***
+
