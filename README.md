@@ -41,7 +41,7 @@ choco install gh
 
 ## Installation manuelle
 
-Téléchargez le fichier **.msi** depuis la [page des releases de GitHub CLI](https://cli.github.com/), exécutez-le et suivez les instructions.
+Téléchargez le fichier **.msi** depuis la [page des releases de GitHub CLI](https://github.com/cli/cli/releases/tag/v2.38.0), exécutez-le et suivez les instructions.
 
 ## MacOS
 
@@ -53,7 +53,7 @@ brew install gh
 
 ### Avec MacPorts
 
-Téléchargez le fichier **.pkg** depuis la [page des releases de GitHub CLI](https://cli.github.com/), ouvrez-le et suivez les instructions.
+Téléchargez le fichier **.pkg** depuis la [page des releases de GitHub CLI](https://github.com/cli/cli/releases/tag/v2.38.0), ouvrez-le et suivez les instructions.
 
 ```bash
 sudo port install gh
@@ -82,7 +82,7 @@ sudo yum install gh
 
 ### Sur Arch Linux avec pacman
 
-Téléchargez le fichier **.tar.gz** depuis la [page des releases de GitHub CLI](https://cli.github.com/), décompressez-le et suivez les instructions du README.
+Téléchargez le fichier **.tar.gz** depuis la [page des releases de GitHub CLI](https://github.com/cli/cli/releases/tag/v2.38.0), décompressez-le et suivez les instructions du README.
 
 ```bash 
 sudo pacman -S github-cli
