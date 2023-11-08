@@ -192,7 +192,85 @@ Téléchargez des assets spécifiques de la dernière release :
 ```bash
 gh release download --pattern "*.zip"
 ```
-=======
+GitHub CLI (`gh`) est un outil puissant pour interagir avec GitHub directement depuis votre terminal. Voici un "cheat sheet" des commandes de base et quelques alias que vous pouvez configurer pour raccourcir ces commandes.
+
+### Cheat Sheet de Commandes `gh`
+
+**Authentification:**
+
+- `gh auth login` : Se connecter à GitHub CLI.
+- `gh auth logout` : Se déconnecter de GitHub CLI.
+
+**Gestion des issues:**
+
+- `gh issue list` : Lister les issues.
+- `gh issue view <numéro>` : Voir une issue spécifique.
+- `gh issue create` : Créer une nouvelle issue.
+- `gh issue close <numéro>` : Fermer une issue.
+- `gh issue reopen <numéro>` : Réouvrir une issue fermée.
+
+**Gestion des pull requests:**
+
+- `gh pr list` : Lister les Pull Requests.
+- `gh pr view <numéro>` : Voir une PR spécifique.
+- `gh pr diff <numéro>` : Voir les différences d'une PR.
+- `gh pr checkout <numéro>` : Faire un checkout d'une PR.
+- `gh pr create` : Créer une nouvelle PR.
+- `gh pr edit <numéro>` : Éditer une PR existante.
+- `gh pr merge <numéro>` : Fusionner une PR.
+- `gh pr close <numéro>` : Fermer une PR.
+- `gh pr reopen <numéro>` : Réouvrir une PR fermée.
+
+**Gestion des repos:**
+
+- `gh repo clone <repo>` : Cloner un dépôt.
+- `gh repo create` : Créer un nouveau dépôt.
+- `gh repo fork <repo>` : Forker un dépôt.
+- `gh repo view [--web]` : Voir le dépôt actuel.
+
+**Gestion des workflows (Actions GitHub):**
+
+- `gh workflow list` : Lister les workflows.
+- `gh workflow view <workflow_id>` : Voir un workflow.
+- `gh workflow run <workflow_id>` : Exécuter un workflow.
+- `gh workflow disable <workflow_id>` : Désactiver un workflow.
+- `gh workflow enable <workflow_id>` : Activer un workflow.
+
+**Alias:**
+
+GitHub CLI vous permet de créer des alias pour les commandes, afin de réduire la quantité de frappe nécessaire pour les exécuter.
+
+Pour configurer un alias dans `gh`, utilisez la commande suivante:
+
+```sh
+gh alias set <alias> '<commande>'
+```
+
+Par exemple:
+
+- `gh alias set prl 'pr list'` : Crée un alias `prl` pour `gh pr list`.
+- `gh alias set vic 'issue create'` : Crée un alias `vic` pour `gh issue create`.
+- `gh alias set vpr 'pr view'` : Crée un alias `vpr` pour `gh pr view`.
+
+Pour utiliser un alias, tapez simplement `gh` suivi de l'alias:
+
+```sh
+gh prl
+```
+
+Pour voir tous vos alias:
+
+```sh
+gh alias list
+```
+
+Pour supprimer un alias:
+
+```sh
+gh alias delete <alias>
+```
+
+Ces alias sont personnalisables, donc vous pouvez les configurer comme bon vous semble pour correspondre à votre workflow. N'oubliez pas que chaque alias devrait rendre votre utilisation de `gh` plus efficace et plus rapide.
 
 
 
