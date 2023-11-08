@@ -10,9 +10,9 @@
 
 <ul>
     <li><a href="introduction.md">Introduction</a></li>
-    <li><a href="Installation.md">Installation</a></li>
-    <li><a href="Utilisation.md">Bases de l'utilisation</a></li>
-    <li><a href="Gists.md">GitHub Gist</a></li>
+    <li><a href="installation.md">Installation</a></li>
+    <li><a href="utilisation.md">Bases de l'utilisation</a></li>
+    <li><a href="gist.md">GitHub Gist</a></li>
 </ul>
 
 <br>
