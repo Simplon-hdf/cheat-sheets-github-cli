@@ -4,9 +4,7 @@
 
 # GitHub CLI
 
-
 ## Table des matières
-
 
 <br>
 
@@ -18,8 +16,6 @@
 </ul>
 
 <br>
-
-
 
 # Cheat-Sheet de Commandes `gh`
 
