@@ -59,8 +59,6 @@ sudo yum install gh
 
 #### Sur Arch Linux avec pacman
 
-Téléchargez le fichier **.tar.gz** depuis la [page des releases de GitHub CLI](https://cli.github.com/), décompressez-le et suivez les instructions du README.
-
 ```bash 
 sudo pacman -S github-cli
 ```
