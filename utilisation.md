@@ -101,7 +101,9 @@ Elles sont utilisées pour chatouiller la rétine de l'utilisateur, avoir des in
 
 Vous trouverez une liste d'extensions à ce lien: [Page des extensions GitHub CLI](https://github.com/topics/gh-extension/) .
 
-
+Par exemple, l'extension Dash ouvre un tableau de bord pour visualiser l'état des Pull Requests et des Issues:
+<p align="center"><img src="images/ghDash.png" /></p>
+<br>
 
 ### Installer des extensions
 
