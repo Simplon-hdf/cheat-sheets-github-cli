@@ -14,18 +14,17 @@ Les gists peuvent être créés soit en tant que fichiers publics que tout le mo
 
 Pour créer un nouveau gist :
 
-```bash
+```sh
 gh gist create <filename>
 ```
 
-- `<filename>` : le fichier que vous souhaitez télécharger en tant que gist.
-
+- `<filename>` : Le fichier que vous souhaitez uploader en tant que gist.
 
 ### Lister vos Gists
 
 Pour voir la liste de vos gists :
 
-```bash
+```sh
 gh gist list
 ```
 
@@ -33,50 +32,48 @@ gh gist list
 
 Pour afficher le contenu d'un gist :
 
-```bash
+```sh
 gh gist view <gist-id>
 ```
- `<gist-id>` : l'identifiant du gist que vous souhaitez visualiser.
-
-
+ `<gist-id>` : L'identifiant du gist que vous souhaitez visualiser.
 
 ### Éditer un Gist
 
 Pour éditer un gist existant :
 
-```bash
+```sh
 gh gist edit <gist-id>
 ```
 
-`<gist-id>` : l'identifiant du gist que vous souhaitez éditer.
-
+`<gist-id>` : L'identifiant du gist que vous souhaitez éditer.
 
 ### Cloner un Gist
 
 Pour cloner un gist dans un répertoire local :
 
-```bash
+```sh
 gh gist clone <gist-id>
 ```
-`<gist-id>` : l'identifiant du gist que vous souhaitez cloner.
+`<gist-id>` : L'identifiant du gist que vous souhaitez cloner.
 
 ### Supprimer un Gist
 
 Pour supprimer un gist :
 
-```bash
+```sh
 gh gist delete <gist-id>
 ```
 
-- `<gist-id>` : l'identifiant du gist que vous souhaitez supprimer.
+- `<gist-id>` : L'identifiant du gist que vous souhaitez supprimer.
 
 ### Gist Help 
 
-L'utilisation de `gh` pour les gists permet une intégration fluide et rapide avec votre flux de travail en ligne de commande. Pour plus de détails sur les commandes `gh gist`, vous pouvez toujours exécuter :
+L'utilisation de `gh` pour les gists permet une intégration fluide et rapide avec votre flux de travail en ligne de commande. Pour plus de détails sur les commandes `gh gist`, vous pouvez exécuter :
 
-```bash
+```sh
 gh gist --help
 ```
 
-<p align="center"><img src="images/gistHelp.png" /></p>
-<br>
+<div align="center">
+  <img src="images/gistHelp.png"/>
+</div>
