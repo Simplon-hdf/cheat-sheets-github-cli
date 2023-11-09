@@ -58,7 +58,9 @@ Il est possible d'y ajouter un titre (<code>--title "your text"</code>), un corp
 ```
 gh issue create
 ```
-
+<p align="center"><img src="images/ghIssue1.png" /></p>
+<p align="center"><img src="images/ghIssue2.png" /></p>
+<p align="center"><img src="images/ghIssue3.png" /></p>
 ### Création des Pull Request
 
 Pour créer un Pull Request utilisez la commande <code>gh pr create</code>, puis suivre les instructions dans le Terminal.
