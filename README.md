@@ -6,16 +6,10 @@
 
 ## Table des matières
 
-<br>
-
-<ul>
-    <li><a href="introduction.md">Introduction</a></li>
-    <li><a href="installation.md">Installation</a></li>
-    <li><a href="utilisation.md">Bases de l'utilisation</a></li>
-    <li><a href="gist.md">GitHub Gist</a></li>
-</ul>
-
-<br>
+- [Introduction](./introduction.md)
+- [Installation](./installation.md)
+- [Bases d'utilisation](./utilisation.md)
+- [GitHub Gist](./gist.md)
 
 # Cheat-Sheet de Commandes `gh`
 
