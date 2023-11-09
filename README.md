@@ -1,4 +1,6 @@
-  <p align="center"><img src="ghcli.png" /></p>
+<div align="center">
+  <img src="ghcli.png"/>
+</div>
 
 # GitHub CLI
 
