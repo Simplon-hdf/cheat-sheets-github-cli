@@ -1,4 +1,15 @@
-<a href="README.md">Table des Matières</a>
+# Table des matières
+
+- [Table des matières](#table-des-matières)
+- [Gestion des Gists GitHub avec GitHub CLI](#gestion-des-gists-github-avec-github-cli)
+    - [Qu'est-ce qu'un Gist ?](#quest-ce-quun-gist-)
+    - [Création d'un Gist](#création-dun-gist)
+    - [Lister vos Gists](#lister-vos-gists)
+    - [Voir un Gist](#voir-un-gist)
+    - [Éditer un Gist](#éditer-un-gist)
+    - [Cloner un Gist](#cloner-un-gist)
+    - [Supprimer un Gist](#supprimer-un-gist)
+    - [Gist Help](#gist-help)
 
 # Gestion des Gists GitHub avec GitHub CLI
 
