@@ -8,7 +8,7 @@ Les lignes de commandes GitHub CLI, doivent être utilisée pour gagner du temps
 Entrez <code>gh status</code> pour voir les détails de votre travail actuel sur GitHub dans tous les référentiels.
 
 ``` 
-gh status
+gh status <flag>
 ```
 Entrez <code>gh help</code> pour obtenir de l'aide directement dans l'application.
 ```
@@ -67,10 +67,16 @@ gh pr create
 ```
 <p align="center"><img src="images/prCreate.png" /></p>
 <br>
-Il est possible de lister les Pull Request en cour avec la commande <code>gh pr list</code>. 
+
+Il est possible de lister les Pull Request en cour avec la commande <code>gh pr list</code>.
+
+
+
 ```
 gh pr list
 ```
+<p align="center"><img src="images/ghList1.png" /></p>
+<p align="center"><img src="images/ghList2.png" /></p>
 La liste indiquera le numéro de la Pull Request à utilister dans le Terminal. Par exemple pour voir le Pull Request, utilisez la commande <code>gh pr view 1</code>, pour voir la première Pull Request.
 
 Pour voir les conflits entre la branche principale et la Pull Request, utilisez la commande <code>gh pr diff 1</code> (pour le premier Pull Resquest).
