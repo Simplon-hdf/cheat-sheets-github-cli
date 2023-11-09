@@ -6,10 +6,14 @@
 
 ## Table des matières
 
-- [Introduction](./introduction.md)
-- [Installation](./installation.md)
-- [Bases d'utilisation](./utilisation.md)
-- [GitHub Gist](./gist.md)
+- [GitHub CLI](#github-cli)
+  - [Table des matières](#table-des-matières)
+- [Cheat-Sheet de Commandes `gh`](#cheat-sheet-de-commandes-gh)
+    - [**Authentification:**](#authentification)
+    - [**Gestion des issues:**](#gestion-des-issues)
+    - [**Gestion des pull requests:**](#gestion-des-pull-requests)
+    - [**Gestion des repos:**](#gestion-des-repos)
+    - [**Gestion des workflows (Actions GitHub):**](#gestion-des-workflows-actions-github)
 
 # Cheat-Sheet de Commandes `gh`
 
