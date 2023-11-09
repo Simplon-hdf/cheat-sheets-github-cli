@@ -4,13 +4,13 @@
 
 ### Windows
 
-#### Avec Scoop
+**Avec Scoop**
 
 ```bash
 scoop install gh
 ```
 
-#### Avec Chocolatey
+**Avec Chocolatey**
 
 ```bash
 choco install gh
@@ -22,13 +22,13 @@ Téléchargez le fichier **.msi** depuis la [page des releases de GitHub CLI](ht
 
 ### MacOS
 
-#### Avec Homebrew
+**Avec Homebrew**
 
 ```bash
 brew install gh
 ```
 
-#### Avec MacPorts
+**Avec MacPorts**
 
 Téléchargez le fichier **.pkg** depuis la [page des releases de GitHub CLI](https://cli.github.com/), ouvrez-le et suivez les instructions.
 
@@ -38,26 +38,26 @@ sudo port install gh
 
 ### Linux
 
-#### Sur Debian/Ubuntu (et dérivés) avec apt
+**Avec apt**
 
 ```bash
 sudo apt update
 sudo apt install gh
 ```
 
-#### Sur Fedora avec dnf
+**Avec dnf**
 
 ```bash
 sudo dnf install gh
 ```
 
-#### Sur CentOS avec yum
+**Avec Yum**
 
 ```bash
 sudo yum install gh
 ```
 
-#### Sur Arch Linux avec pacman
+**Avec Pacman**
 
 ```bash 
 sudo pacman -S github-cli
@@ -69,10 +69,7 @@ sudo pacman -S github-cli
 gh --version
 ```
 
-<br>
-
-***
-## CONFIGURATION
+## Configuration
 
 ### GitHub Authentication
 
@@ -84,9 +81,7 @@ gh auth login
 
 Suivez les instructions à l'écran pour vous authentifier à votre compte GitHub.
 
-
-
-###  Code Editor Configuration
+### Code Editor Configuration
 
 Définir votre éditeur pour les opérations en ligne de commande, utilisez la commande `gh config set editor` suivi du nom de votre éditeur. 
 
@@ -94,7 +89,7 @@ Définir votre éditeur pour les opérations en ligne de commande, utilisez la c
 gh config set editor code
 ```
 
-###  Alias
+### Aliases
 
 Déclarer des alias pour les commandes que vous utilisez fréquemment, utilisez la commande `gh alias set`. 
 
