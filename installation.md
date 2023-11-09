@@ -2,7 +2,7 @@
 
 # Installer GitHub CLI
 
-### Windows
+## Windows
 
 **Avec Scoop**
 
@@ -16,11 +16,11 @@ scoop install gh
 choco install gh
 ```
 
-#### Installation manuelle
+### Installation manuelle
 
 Téléchargez le fichier **.msi** depuis la [page des releases de GitHub CLI](https://cli.github.com/), exécutez-le et suivez les instructions.
 
-### MacOS
+## MacOS
 
 **Avec Homebrew**
 
@@ -36,7 +36,7 @@ Téléchargez le fichier **.pkg** depuis la [page des releases de GitHub CLI](ht
 sudo port install gh
 ```
 
-### Linux
+## Linux
 
 **Avec apt**
 
@@ -63,7 +63,7 @@ sudo yum install gh
 sudo pacman -S github-cli
 ```
 
-### Vérification de l'installation 
+## Voir la version installée 
 
 ```bash
 gh --version
