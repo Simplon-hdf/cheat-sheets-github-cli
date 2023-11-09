@@ -1,4 +1,10 @@
-<a href="README.md">Table des Matières</a>
+# Table des matières
+
+- [Table des matières](#table-des-matières)
+- [Introduction à GitHub CLI](#introduction-à-github-cli)
+    - [Qu'est-ce que GitHub CLI ?](#quest-ce-que-github-cli-)
+    - [Pourquoi utiliser GitHub CLI ?](#pourquoi-utiliser-github-cli-)
+
 # Introduction à GitHub CLI
 
 ### Qu'est-ce que GitHub CLI ?
